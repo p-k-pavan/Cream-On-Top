@@ -63,7 +63,7 @@ export default function Testimonials() {
             tag: "Daily Pastries",
             rating: 5,
             quote: "Best chocolate chip croissants in Bangalore. Hands down!",
-           
+
             image: "/category/CUP CAKE.png",
             cakeName: "Pain au Chocolat & Croissants"
         },
@@ -103,11 +103,11 @@ export default function Testimonials() {
             <div className="absolute bottom-24 -right-48 h-96 w-96 rounded-full bg-[#e3d1be]/10 blur-[120px] pointer-events-none" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
-                
+
                 <div className="flex flex-col items-center text-center mb-16">
                     <div className="flex items-center justify-between w-full max-w-4xl px-4 gap-4">
 
-                        <button 
+                        <button
                             onClick={handlePrev}
                             className="p-3 rounded-full hover:bg-black/5 transition-all active:scale-95 cursor-pointer flex-shrink-0"
                             aria-label="Previous Testimonial"
@@ -121,7 +121,7 @@ export default function Testimonials() {
                             What Our Clients Say About Us
                         </h2>
 
-                        <button 
+                        <button
                             onClick={handleNext}
                             className="p-3 rounded-full hover:bg-black/5 transition-all active:scale-95 cursor-pointer flex-shrink-0"
                             aria-label="Next Testimonial"
@@ -137,11 +137,10 @@ export default function Testimonials() {
                             <button
                                 key={idx}
                                 onClick={() => setActiveId(idx)}
-                                className={`rounded-full transition-all duration-300 cursor-pointer ${
-                                    idx === activeId 
-                                        ? "w-3.5 h-3.5 bg-[#151e1f]" 
+                                className={`rounded-full transition-all duration-300 cursor-pointer ${idx === activeId
+                                        ? "w-3.5 h-3.5 bg-[#151e1f]"
                                         : "w-2 h-2 bg-gray-400/70 hover:bg-gray-600"
-                                }`}
+                                    }`}
                                 aria-label={`Go to slide ${idx + 1}`}
                             />
                         ))}
@@ -160,28 +159,28 @@ export default function Testimonials() {
                         >
                             {/* Left Card (Mirrored Shape, Shadow Left) */}
                             <div className="hidden md:block">
-                                <Card 
-                                    item={prevItem} 
-                                    position="left" 
-                                    onClick={handlePrev} 
+                                <Card
+                                    item={prevItem}
+                                    position="left"
+                                    onClick={handlePrev}
                                 />
                             </div>
 
-                            
+
                             <div className="block">
-                                <Card 
-                                    item={currentItem} 
-                                    position="center" 
-                                    onClick={() => {}} 
+                                <Card
+                                    item={currentItem}
+                                    position="center"
+                                    onClick={() => { }}
                                 />
                             </div>
 
-                        
+
                             <div className="hidden md:block">
-                                <Card 
-                                    item={nextItem} 
-                                    position="right" 
-                                    onClick={handleNext} 
+                                <Card
+                                    item={nextItem}
+                                    position="right"
+                                    onClick={handleNext}
                                 />
                             </div>
                         </motion.div>
@@ -202,13 +201,13 @@ interface CardProps {
 function Card({ item, position, onClick }: CardProps) {
     const [isHovered, setIsHovered] = useState(false);
 
-  
-    const shadowColor = "#181918";
-    const leftCardBg = "white"; 
-    const centerCardBg = "white"; 
-    const rightCardBg = "white"; 
 
-  
+    const shadowColor = "#181918";
+    const leftCardBg = "white";
+    const centerCardBg = "white";
+    const rightCardBg = "white";
+
+
     const styleAShadowPath = "M100.511 0C69.1794 7.93582 60.4727 16.4044 55 36.0747L73.0476 378H406.536C427.274 366.931 433.637 350.44 434 299.577C423.705 197.51 411.141 139.329 392.412 36.0747C382.968 21.7603 380.915 12.2025 343.762 10.9793L100.511 0Z";
     const styleABodyPath = "M0 337.695L37.5199 55.5321C46.4988 34.2465 54.4995 24.4931 81.0431 13.5078C164.926 5.63801 232.871 3.95855 346.684 0C376.017 8.8112 393.61 13.5281 408.217 55.5321C411.7 169.345 415.367 250.574 414.971 324.938C413.772 357.978 406.418 371.127 380.452 384.222C223.097 413.091 136.987 428.655 63.0335 433C18.4371 419.114 0.327199 399.961 0 337.695Z";
 
@@ -235,17 +234,17 @@ function Card({ item, position, onClick }: CardProps) {
         paddingClass = "px-9 py-16";
         textMaxWidth = "max-w-[240px]";
         containerClass = "w-[329px] h-[384px] sm:w-[346px] sm:h-[408px] lg:w-[360px] lg:h-[420px] scale-95 md:opacity-75 hover:opacity-100 hover:scale-[0.97] z-10";
-        
+
         shadowElement = (
             <path d={styleBShadowPath} fill={shadowColor} />
         );
         cardElement = (
-            <path 
-                d={styleBBodyPath} 
-                fill={cardBg} 
-                stroke="#151e1f" 
-                strokeWidth="1.5" 
-                strokeOpacity="0.1" 
+            <path
+                d={styleBBodyPath}
+                fill={cardBg}
+                stroke="#151e1f"
+                strokeWidth="1.5"
+                strokeOpacity="0.1"
             />
         );
     } else if (position === "center") {
@@ -256,17 +255,17 @@ function Card({ item, position, onClick }: CardProps) {
         paddingClass = "px-10 py-12";
         textMaxWidth = "max-w-[284px]";
         containerClass = "w-[384px] h-[384px] sm:w-[408px] sm:h-[408px] md:w-[384px] md:h-[384px] lg:w-[420px] lg:h-[420px] scale-100 md:scale-105 z-20";
-        
+
         shadowElement = (
             <path d={styleAShadowPath} fill={shadowColor} />
         );
         cardElement = (
-            <path 
-                d={styleABodyPath} 
-                fill={cardBg} 
-                stroke="#151e1f" 
-                strokeWidth="1.5" 
-                strokeOpacity="0.1" 
+            <path
+                d={styleABodyPath}
+                fill={cardBg}
+                stroke="#151e1f"
+                strokeWidth="1.5"
+                strokeOpacity="0.1"
             />
         );
     } else if (position === "right") {
@@ -278,7 +277,7 @@ function Card({ item, position, onClick }: CardProps) {
         textMaxWidth = "max-w-[240px]";
         containerClass = "w-[329px] h-[384px] sm:w-[346px] sm:h-[408px] lg:w-[360px] lg:h-[420px] scale-95 md:opacity-75 hover:opacity-100 hover:scale-[0.97] z-10";
 
-        
+
         shadowElement = (
             <g transform="scale(-1, 1) translate(-346, 0)">
                 <path d={styleBShadowPath} fill={shadowColor} />
@@ -286,27 +285,27 @@ function Card({ item, position, onClick }: CardProps) {
         );
         cardElement = (
             <g transform="scale(-1, 1) translate(-346, 0)">
-                <path 
-                    d={styleBBodyPath} 
-                    fill={cardBg} 
-                    stroke="#151e1f" 
-                    strokeWidth="1.5" 
-                    strokeOpacity="0.1" 
+                <path
+                    d={styleBBodyPath}
+                    fill={cardBg}
+                    stroke="#151e1f"
+                    strokeWidth="1.5"
+                    strokeOpacity="0.1"
                 />
             </g>
         );
     }
 
     return (
-        <div 
+        <div
             onClick={onClick}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className={`relative cursor-pointer transition-all duration-500 ease-out select-none ${containerClass}`}
         >
-            
-            <svg 
-                viewBox={viewBox} 
+
+            <svg
+                viewBox={viewBox}
                 className="absolute inset-0 w-full h-full drop-shadow-md overflow-visible"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -334,10 +333,10 @@ function Card({ item, position, onClick }: CardProps) {
                 {cardElement}
 
                 <g clipPath={`url(#${clipPathId})`}>
-                    <image 
-                        href={item.image} 
-                        width={imgWidth} 
-                        height={imgHeight} 
+                    <image
+                        href={item.image}
+                        width={imgWidth}
+                        height={imgHeight}
                         preserveAspectRatio="xMidYMid slice"
                         style={{
                             transition: 'opacity 0.5s ease-in-out, transform 0.7s ease-out',
@@ -349,20 +348,19 @@ function Card({ item, position, onClick }: CardProps) {
                 </g>
             </svg>
 
-            <div 
-                className={`absolute inset-0 flex flex-col justify-between transition-all duration-500 ease-in-out ${paddingClass} ${
-                    isHovered ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
-                }`}
+            <div
+                className={`absolute inset-0 flex flex-col justify-between transition-all duration-500 ease-in-out ${paddingClass} ${isHovered ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
+                    }`}
             >
                 <div className="flex flex-col items-center text-center mt-2">
-                    <h3 className="text-[#151e1f] text-4xl font-bold leading-tight break-words max-w-[220px] text-center">
+                    <h3 className="text-[#151e1f] text-4xl font-bold leading-tight wrap-break-word max-w-54 text-center">
                         {item.name}
                     </h3>
-              
+
                 </div>
 
-                <div className="flex flex-col items-center text-center mb-6 flex-grow justify-center">
-                    
+                <div className="flex flex-col items-center text-center mb-6 grow justify-center">
+
                     <span className="text-4xl md:text-5xl text-[#151e1f] font-serif leading-none mb-2">
                         “
                     </span>
@@ -372,16 +370,22 @@ function Card({ item, position, onClick }: CardProps) {
                 </div>
             </div>
 
-          
+
             {position === 'center' && (
-                <div 
-                    className={`absolute inset-x-0 top-20 flex justify-center transition-all duration-500 ease-in-out pointer-events-none ${
-                        isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
-                    }`}
+                <div
+                    className={`absolute bottom-16 inset-x-0 flex justify-center transition-all duration-500 ease-in-out pointer-events-none ${isHovered ? 'opacity-100 scale-100' : 'opacity-100 scale-100'
+                        }`}
                 >
-                    <span className="text-7xl text-[#151e1f] font-serif leading-none drop-shadow-sm select-none">
-                        “
-                    </span>
+                    <div className="flex items-center gap-1">
+                        {Array.from({ length: item.rating }).map((_, idx) => (
+                            <span
+                                key={idx}
+                                className="text-[#151e1f] text-2xl hover:text-transparent"
+                            >
+                                ★
+                            </span>
+                        ))}
+                    </div>
                 </div>
             )}
         </div>

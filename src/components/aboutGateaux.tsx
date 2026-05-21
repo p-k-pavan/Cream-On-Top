@@ -1,0 +1,122 @@
+'use client';
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+export default function AboutGateaux() {
+    return (
+        <section className="relative min-h-screen py-24 md:py-40 bg-linear-to-b from-[#d7f8ff] via-[#eef9fc] to-[#f7f4e7] ">
+
+        
+
+            {/* Title */}
+            <div className="absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20 ">
+                <h1 className=" text-[#151e1f] text-center">
+                    About Our Gateaux
+                </h1>
+            </div>
+
+            {/* Left Image - 4:3 */}
+            <motion.div
+                initial={{ opacity: 0, x: -80, rotate: -6 }}
+                whileInView={{ opacity: 1, x: 0, rotate: -4 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="absolute  bottom-28 left-8 md:left-20 z-10"
+            >
+                <div className="relative">
+
+                    <div className="absolute inset-0 bg-black/15 translate-x-5 translate-y-5 rounded-[36px]" />
+
+                    <div className="relative bg-[#f8f5ef] p-4 rounded-[36px] border border-black/10 shadow-2xl">
+
+                        <div className="border border-[#d8c3a5] rounded-[28px] p-3">
+
+                            <Image
+                                src="/about/image4.webp"
+                                alt="About Gateaux"
+                                width={600}
+                                height={450}
+                                className="w-70 sm:w-85 md:w-105 lg:w-130 
+                                aspect-4/3 object-cover rounded-3xl"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* Right Image - 3:4 */}
+            <motion.div
+                initial={{ opacity: 0, x: 80, rotate: 6 }}
+                whileInView={{ opacity: 1, x: 0, rotate: 4 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="absolute right-6 md:right-64 top-1/3 md:top-3/5 -translate-y-1/2 z-20 mt-12 md:mt-0"
+            >
+                <div className="relative">
+
+                    {/* Bow */}
+                    <div className="absolute -top-10 -right-8 z-30 rotate-20">
+                        <div className="relative w-20 h-20">
+
+                            <div className="absolute left-1/2 top-1/2 w-6 h-6 rounded-full bg-[#f3d3dc] border border-[#d4a6b2] -translate-x-1/2 -translate-y-1/2 z-20" />
+
+                            <div className="absolute left-0 top-3 w-10 h-14 bg-[#f7dce4] rounded-full rotate-[-25deg] border border-[#d4a6b2]" />
+
+                            <div className="absolute right-0 top-3 w-10 h-14 bg-[#f7dce4] rounded-full rotate-25 border border-[#d4a6b2]" />
+
+                            <div className="absolute left-6.5 bottom-0 w-4 h-10 bg-[#f7dce4] rotate-[8deg] rounded-b-full border border-[#d4a6b2]" />
+
+                            <div className="absolute right-6.5 bottom-0 w-4 h-10 bg-[#f7dce4] rotate-[-8deg] rounded-b-full border border-[#d4a6b2]" />
+                        </div>
+                    </div>
+
+                    <div className="absolute inset-0 bg-black/15 translate-x-5 translate-y-5 rounded-[40px]" />
+
+                    <div className="relative bg-[#f8f5ef] p-4 rounded-[40px] border border-black/10 shadow-2xl">
+
+                        <div className="border border-[#d8c3a5] rounded-4xl p-3">
+
+                            <Image
+                                src="/about/image2.webp"
+                                alt="About Gateaux"
+                                width={400}
+                                height={600}
+                                className="w-55 sm:w-62.5 md:w-70 lg:w-[320px] 
+                                aspect-3/4 object-cover rounded-[28px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="absolute -bottom-5 md:-bottom-24 left-1/2 -translate-x-1/2 z-30 text-center px-6"
+            >
+                <div className="relative max-w-xl mx-auto">
+
+                    <div className="flex items-center justify-center gap-4 mb-6">
+                        <div className="h-px w-16 bg-[#151e1f]/20" />
+                        <div className="w-2 h-2 rounded-full bg-[#151e1f]/40" />
+                        <div className="h-px w-16 bg-[#151e1f]/20" />
+                    </div>
+
+                    <p className="text-[#151e1f] text-lg sm:text-xl md:text-2xl lg:text-3xl 
+                                    leading-relaxed md:leading-loose font-medium tracking-wide">
+                        Our Gateaux are crafted with buttery sponge layers delicately soaked
+                        in syrup and finished with silky whipped cream creating a luxurious
+                        dessert experience in every bite.
+                    </p>
+
+                    <p className="mt-5 text-sm md:text-base tracking-[0.3em] uppercase text-[#151e1f]/50">
+                        Handcrafted • Elegant • Premium
+                    </p>
+                </div>
+            </motion.div>
+        </section>
+    );
+}

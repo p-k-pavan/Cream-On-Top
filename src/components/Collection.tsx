@@ -57,7 +57,7 @@ useEffect(() => {
 }, []);
 
     return (
-        <section className="relative h-[220vh] bg-linear-to-b from-[#f7f4e7] to-[#d7f8ff]">
+        <section className="relative h-[220vh] bg-linear-to-b from-[#f7f4e7] to-[#d7f8ff] ">
 
             {/* Sticky Section */}
             <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
@@ -186,6 +186,7 @@ useEffect(() => {
                     bg-[#151e1f]
                     sm:h-70
                     sm:w-70
+                    mb-16
                 ">
 
 
