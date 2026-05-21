@@ -109,7 +109,7 @@ export default function Testimonials() {
 
                         <button
                             onClick={handlePrev}
-                            className="p-3 rounded-full hover:bg-black/5 transition-all active:scale-95 cursor-pointer flex-shrink-0"
+                            className="p-3 rounded-full hover:bg-black/5 transition-all active:scale-95 cursor-pointer shrink-0"
                             aria-label="Previous Testimonial"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 text-[#151e1f]">
@@ -123,7 +123,7 @@ export default function Testimonials() {
 
                         <button
                             onClick={handleNext}
-                            className="p-3 rounded-full hover:bg-black/5 transition-all active:scale-95 cursor-pointer flex-shrink-0"
+                            className="p-3 rounded-full hover:bg-black/5 transition-all active:scale-95 cursor-pointer shrink-0"
                             aria-label="Next Testimonial"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 text-[#151e1f]">

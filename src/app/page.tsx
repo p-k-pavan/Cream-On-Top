@@ -6,6 +6,7 @@ import Promise from "@/components/promise";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import AboutGateaux from "@/components/aboutGateaux";
+import BestSelling from "@/components/bestSelleing";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <div className="py-20 bg-linear-to-b from-[#d7f8ff] via-[#eef9fc] to-[#f7f4e7] ">
           <AboutGateaux />
         </div>
+        <BestSelling />
         <Testimonials />
       </main>
       <Footer />
