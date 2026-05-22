@@ -152,7 +152,7 @@ useEffect(() => {
                                     whileHover={{ scale: 1.1 }}
                                 >
 
-                                    <Link href={`/title`} >
+                                    {/* <Link href={`/title`} > */}
                                         <Image
                                             src={item.image}
                                             alt={item.title}
@@ -160,7 +160,7 @@ useEffect(() => {
                                             height={160}
                                             className="object-contain drop-shadow-xl w-25 h-25 md:w-40 md:h-40"
                                         />
-                                    </Link>
+                                    {/* </Link> */}
 
 
 
