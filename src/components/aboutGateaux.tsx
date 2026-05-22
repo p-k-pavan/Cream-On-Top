@@ -2,16 +2,38 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function AboutGateaux() {
+    const [isShortScreen, setIsShortScreen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        const checkHeight = () => {
+            setIsShortScreen(window.innerHeight < 640);
+        };
+        checkHeight();
+        window.addEventListener("resize", checkHeight);
+        return () => window.removeEventListener("resize", checkHeight);
+    }, []);
+
+    const showShortScreenLayout = mounted && isShortScreen;
+
     return (
-        <section className="relative min-h-screen py-24 md:py-60 bg-linear-to-b from-[#d7f8ff] via-[#eef9fc] to-[#f7f4e7] max-w-screen overflow-x-clip">
+        <section className={`relative bg-linear-to-b from-[#d7f8ff] via-[#eef9fc] to-[#f7f4e7] max-w-screen overflow-x-clip ${
+            showShortScreenLayout ? "py-12 h-auto" : "min-h-screen py-24 md:py-60"
+        }`}>
 
         
 
             {/* Title */}
-            <div className="absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20 w-full ">
-                <h1 className=" text-[#151e1f] text-center px-4">
+            <div className={
+                showShortScreenLayout
+                    ? "relative text-center mb-8 z-20"
+                    : "absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20"
+            }>
+                <h1 className=" text-[#151e1f] text-center">
                     About Our Gateaux
                 </h1>
             </div>
@@ -22,7 +44,11 @@ export default function AboutGateaux() {
                 whileInView={{ opacity: 1, x: 0, rotate: -4 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="absolute  bottom-28 md:bottom-28 left-0 md:left-20 z-10"
+                className={
+                    showShortScreenLayout
+                        ? "relative mx-auto my-6 z-10 flex justify-center"
+                        : "absolute bottom-16 md:bottom-28 left-0 md:left-20 z-30"
+                }
             >
                 <div className="relative">
 
@@ -51,7 +77,11 @@ export default function AboutGateaux() {
                 whileInView={{ opacity: 1, x: 0, rotate: 4 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
-                className="absolute right-16 md:right-64 top-1/3 md:top-3/5 -translate-y-1/2 z-20 mt-12 md:mt-0"
+                className={
+                    showShortScreenLayout
+                        ? "relative mx-auto my-6 z-20 flex justify-center mt-12"
+                        : "absolute right-16 md:right-64 top-1/3 md:top-3/5 -translate-y-1/2 z-20 mt-12 md:mt-0"
+                }
             >
                 <div className="relative">
 
@@ -63,7 +93,7 @@ export default function AboutGateaux() {
 
                             <div className="absolute left-0 top-3 w-10 h-14 bg-[#f7dce4] rounded-full rotate-[-25deg] border border-[#d4a6b2]" />
 
-                            <div className="absolute right-0 top-3 w-10 h-14 bg-[#f7dce4] rounded-full rotate-25 border border-[#d4a6b2]" />
+                            <div className="absolute right-0 top-3 w-10 h-14 bg-[#f7dce4] rounded-full rotate 25 border border-[#d4a6b2]" />
 
                             <div className="absolute left-6.5 bottom-0 w-4 h-10 bg-[#f7dce4] rotate-[8deg] rounded-b-full border border-[#d4a6b2]" />
 
@@ -95,7 +125,11 @@ export default function AboutGateaux() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-40 md:-bottom-24 left-1/2 -translate-x-1/2 z-30 text-center px-6 w-full"
+                className={
+                    showShortScreenLayout
+                        ? "relative text-center px-6 w-full mt-8 pb-8 z-30"
+                        : "absolute -bottom-65 md:-bottom-24 left-1/2 -translate-x-1/2 z-30 text-center px-6 w-full"
+                }
             >
                 <div className="relative max-w-2xl mx-auto">
 
@@ -105,7 +139,7 @@ export default function AboutGateaux() {
                         <div className="h-px w-16 bg-[#151e1f]/20" />
                     </div>
 
-                    <p className="text-[#151e1f]  sm:text-xl md:text-2xl lg:text-3xl 
+                    <p className="text-[#151e1f] text-lg sm:text-xl md:text-2xl lg:text-3xl 
                                     leading-relaxed md:leading-loose font-medium tracking-wide">
                         Our Gateaux are crafted with buttery sponge layers delicately soaked
                         in syrup and finished with silky whipped cream creating a luxurious
