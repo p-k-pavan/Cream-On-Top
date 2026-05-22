@@ -30,8 +30,8 @@ export default function AboutGateaux() {
             {/* Title */}
             <div className={
                 showShortScreenLayout
-                    ? "relative text-center mb-8 z-20"
-                    : "absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20"
+                    ? "relative text-center mb-16"
+                    : "absolute top-0 md:top-12 left-1/2 -translate-x-1/2 z-20 w-full"
             }>
                 <h1 className=" text-[#151e1f] text-center">
                     About Our Gateaux

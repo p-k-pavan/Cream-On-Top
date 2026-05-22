@@ -117,7 +117,7 @@ export default function Testimonials() {
                             </svg>
                         </button>
 
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#151e1f] font-sans px-2 leading-tight select-none">
+                        <h2 className=" text-[#151e1f] ">
                             What Our Clients Say About Us
                         </h2>
 
