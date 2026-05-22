@@ -72,7 +72,7 @@ export default function Promise() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-10"
+                    className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4 md:gap-10"
                 >
 
                     {/* Card 1 */}

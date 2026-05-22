@@ -83,7 +83,7 @@ export default function Hero() {
                                 width={620}
                                 height={620}
                                 priority
-                                className=" h-auto w-70 sm:w-90 md:w-115 lg:w-155 object-contain -mt-32 sm:-mt-96 md:-mt-16" />
+                                className=" h-auto w-70 sm:w-90 md:w-115 lg:w-155 object-contain -mt-8 sm:-mt-96 md:-mt-16" />
 
                          </motion.div>
 

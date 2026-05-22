@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 export default function AboutGateaux() {
     return (
-        <section className="relative min-h-screen py-24 md:py-40 bg-linear-to-b from-[#d7f8ff] via-[#eef9fc] to-[#f7f4e7] ">
+        <section className="relative min-h-screen py-24 md:py-60 bg-linear-to-b from-[#d7f8ff] via-[#eef9fc] to-[#f7f4e7] max-w-screen overflow-x-clip">
 
         
 
             {/* Title */}
-            <div className="absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20 ">
-                <h1 className=" text-[#151e1f] text-center">
+            <div className="absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20 w-full ">
+                <h1 className=" text-[#151e1f] text-center px-4">
                     About Our Gateaux
                 </h1>
             </div>
@@ -22,7 +22,7 @@ export default function AboutGateaux() {
                 whileInView={{ opacity: 1, x: 0, rotate: -4 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="absolute  bottom-28 left-8 md:left-20 z-10"
+                className="absolute  bottom-28 md:bottom-28 left-0 md:left-20 z-10"
             >
                 <div className="relative">
 
@@ -35,9 +35,9 @@ export default function AboutGateaux() {
                             <Image
                                 src="/about/image4.webp"
                                 alt="About Gateaux"
-                                width={600}
-                                height={450}
-                                className="w-70 sm:w-85 md:w-105 lg:w-130 
+                                width={580}
+                                height={420}
+                                className="w-68 sm:w-80 md:w-105 lg:w-130 
                                 aspect-4/3 object-cover rounded-3xl"
                             />
                         </div>
@@ -51,7 +51,7 @@ export default function AboutGateaux() {
                 whileInView={{ opacity: 1, x: 0, rotate: 4 }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
-                className="absolute right-6 md:right-64 top-1/3 md:top-3/5 -translate-y-1/2 z-20 mt-12 md:mt-0"
+                className="absolute right-16 md:right-64 top-1/3 md:top-3/5 -translate-y-1/2 z-20 mt-12 md:mt-0"
             >
                 <div className="relative">
 
@@ -95,9 +95,9 @@ export default function AboutGateaux() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-5 md:-bottom-24 left-1/2 -translate-x-1/2 z-30 text-center px-6"
+                className="absolute -bottom-40 md:-bottom-24 left-1/2 -translate-x-1/2 z-30 text-center px-6 w-full"
             >
-                <div className="relative max-w-xl mx-auto">
+                <div className="relative max-w-2xl mx-auto">
 
                     <div className="flex items-center justify-center gap-4 mb-6">
                         <div className="h-px w-16 bg-[#151e1f]/20" />
@@ -105,7 +105,7 @@ export default function AboutGateaux() {
                         <div className="h-px w-16 bg-[#151e1f]/20" />
                     </div>
 
-                    <p className="text-[#151e1f] text-lg sm:text-xl md:text-2xl lg:text-3xl 
+                    <p className="text-[#151e1f]  sm:text-xl md:text-2xl lg:text-3xl 
                                     leading-relaxed md:leading-loose font-medium tracking-wide">
                         Our Gateaux are crafted with buttery sponge layers delicately soaked
                         in syrup and finished with silky whipped cream creating a luxurious

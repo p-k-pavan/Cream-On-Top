@@ -6,9 +6,9 @@ export default function BestSelling() {
             <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
 
                 <div className="text-center mb-6">
-                    <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-[#151e1f]">
+                    <h1 className=" text-[#151e1f]">
                         Best Selling Cakes
-                    </h2>
+                    </h1>
 
                     <p className="uppercase tracking-[0.4em] text-[#151e1f]/50 text-sm mb-4">
                         Signature Collection
@@ -39,7 +39,7 @@ export default function BestSelling() {
                             <div className="mt-8">
 
                                 <div className="flex items-center justify-between">
-                                    <h3 className="text-3xl md:text-4xl font-bold text-[#151e1f]">
+                                    <h3 className=" text-[#151e1f]">
                                         White Forest Gateaux
                                     </h3>
 
@@ -48,7 +48,7 @@ export default function BestSelling() {
                                     </span>
                                 </div>
 
-                                <p className="mt-6 text-[#3b4547] text-lg leading-relaxed">
+                                <p className="mt-6 text-[#3b4547] ">
                                     Vanilla sponge soaked in sugar syrup, layered
                                     alternatively with smooth vanilla cream and
                                     soft cherries.
@@ -82,7 +82,7 @@ export default function BestSelling() {
 
                             <div className="mt-8">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="text-3xl md:text-4xl font-bold text-[#151e1f]">
+                                    <h3 className=" text-[#151e1f]">
                                         Butterscotch Gateaux
                                     </h3>
 
@@ -91,7 +91,7 @@ export default function BestSelling() {
                                     </span>
                                 </div>
 
-                                <p className="mt-6 text-[#3b4547] text-lg leading-relaxed">
+                                <p className="mt-6 text-[#3b4547] ">
                                     Vanilla sponge soaked in sugar syrup and layered
                                     alternatively with creamy butterscotch filling
                                     and rich butterscotch cream.
